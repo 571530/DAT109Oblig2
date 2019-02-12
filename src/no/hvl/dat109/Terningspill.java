@@ -19,9 +19,14 @@ public class Terningspill {
             spiller.spill(kopp);
             System.out.println(spiller);
         }
+
+        System.out.println("\nVinneren er " + finnVinner());
+    }
+
+    public Spiller finnVinner() {
         Spiller vinner = spillere.stream().max(Comparator.comparingInt(Spiller::getVerdi)).orElse(null);
 
-        System.out.println("\nVinneren er " + vinner);
+        return vinner;
     }
 
     public Terningspill() {

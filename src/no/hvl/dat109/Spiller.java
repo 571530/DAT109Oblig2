@@ -20,8 +20,6 @@ public class Spiller {
 
     @Override
     public String toString() {
-        return navn +
-                " med " + verdi +
-                " poeng";
+        return navn + " med " + verdi + " poeng";
     }
 }
