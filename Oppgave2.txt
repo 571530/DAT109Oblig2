@@ -1,0 +1,23 @@
+Informasjonsekspert:
+Hvem er tildelt ansvaret for å gi informasjon om et objekt?
+-	Klassen Kopp gir informasjon om summen av øynene på koppens tilhørende terninger.
+
+Skaper:
+Hvem er tildelt ansvaret for å lage objekt?
+-   Klassen Terningspill lager Spiller objektene
+-   Klassen Terningspill lager Kopp objektet
+-   Klassen Kopp lager terninger
+
+Kontroller:
+Hvem er tildelt ansvaret for å formidle interaksjon mellom objekt? Spesielt mellom visning og modell
+-   Klassen Terningspillet har overordnet kontrolll
+
+Rein fabrikasjon:
+Vi lager et kunstig objekt for å gjøre løsningen enklere
+-   Koppen er laget for å trille terninger
+
+Lav kopling:
+Tiledele ansvar slik at det ikke er unødvendige avhengigheter mellom objekt •
+Endringer påvirker omgivelsene i liten (minst mulig) grad
+-   Terningspillet er ikke direkte avhenging av hvordan terningene er implementert
+
