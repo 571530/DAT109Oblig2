@@ -2,6 +2,9 @@ package no.hvl.dat109;
 
 import java.util.ArrayList;
 
+/**
+ * The type Kopp.
+ */
 public class Kopp {
     private static int AUTO_ID = 0;
     private static final int ANTALL_TERNINGER = 2;
@@ -11,6 +14,9 @@ public class Kopp {
 
     private ArrayList<Terning> terninger;
 
+    /**
+     * Trill.
+     */
     public void trill() {
         sum = 0;
         for (Terning terning : terninger) {
@@ -19,10 +25,18 @@ public class Kopp {
         }
     }
 
+    /**
+     * Gets sum.
+     *
+     * @return the sum
+     */
     public int getSum() {
         return sum;
     }
 
+    /**
+     * Instantiates a new Kopp.
+     */
     public Kopp() {
         sum = 0;
         id = AUTO_ID++;

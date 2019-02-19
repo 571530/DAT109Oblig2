@@ -6,16 +6,34 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+/**
+ * The type Terningspill.
+ */
 public class Terningspill {
     private int id;
 
+    /**
+     * The Spillere.
+     */
     ArrayList<Spiller> spillere;
+    /**
+     * The Kopp.
+     */
     Kopp kopp;
 
+
+    /**
+     * Legg til spiller.
+     *
+     * @param navn the navn
+     */
     void leggTilSpiller(String navn) {
         spillere.add(new Spiller(navn));
     }
 
+    /**
+     * Spill.
+     */
     void spill() {
         spill(spillere);
 
@@ -24,6 +42,11 @@ public class Terningspill {
         System.out.println("\nVinneren er " + vinner);
     }
 
+    /**
+     * Spill.
+     *
+     * @param spillere the spillere
+     */
     void spill(List<Spiller> spillere) {
         for (Spiller spiller : spillere) {
             spiller.spill(kopp);
@@ -31,6 +54,11 @@ public class Terningspill {
         }
     }
 
+    /**
+     * Finn vinner spiller.
+     *
+     * @return the spiller
+     */
     public Spiller finnVinner() {
         Spiller vinner = spillere.stream().max(Comparator.comparingInt(Spiller::getVerdi)).orElse(null);
 
@@ -51,6 +79,9 @@ public class Terningspill {
         return null;
     }
 
+    /**
+     * Instantiates a new Terningspill.
+     */
     public Terningspill() {
         spillere = new ArrayList<>();
         id = 0;
