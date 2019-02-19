@@ -6,10 +6,9 @@ import java.util.ArrayList;
  * The type Kopp.
  */
 public class Kopp {
-    private static int AUTO_ID = 0;
     private static final int ANTALL_TERNINGER = 2;
 
-    private int id;
+    private int id; // Ikke i bruk
     private int sum;
 
     private ArrayList<Terning> terninger;
@@ -26,6 +25,15 @@ public class Kopp {
     }
 
     /**
+     * Sets sum.
+     *
+     * @param sum the sum
+     */
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
+    /**
      * Gets sum.
      *
      * @return the sum
@@ -39,7 +47,7 @@ public class Kopp {
      */
     public Kopp() {
         sum = 0;
-        id = AUTO_ID++;
+        id = 0;
         terninger = new ArrayList<>();
 
         for (int i = 0; i < ANTALL_TERNINGER; i++) {

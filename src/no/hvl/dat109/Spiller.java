@@ -5,6 +5,7 @@ package no.hvl.dat109;
  */
 public class Spiller {
     private String navn;
+
     private int verdi;
 
     /**
@@ -34,6 +35,15 @@ public class Spiller {
      */
     public int getVerdi() {
         return verdi;
+    }
+
+    /**
+     * Sets verdi.
+     *
+     * @param verdi the verdi
+     */
+    public void setVerdi(int verdi) {
+        this.verdi = verdi;
     }
 
     @Override

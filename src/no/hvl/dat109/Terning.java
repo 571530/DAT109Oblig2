@@ -6,11 +6,9 @@ import java.util.Random;
  * The type Terning.
  */
 public class Terning {
-    private static int AUTO_ID = 0;
-
     private Random rand;
     private int verdi;
-    private int id;
+    private int id; // Ikke i bruk
 
     /**
      * Instantiates a new Terning.
@@ -18,7 +16,7 @@ public class Terning {
     public Terning() {
         rand = new Random();
         verdi = 0;
-        id = AUTO_ID++;
+        id = 0;
         trill();
     }
 

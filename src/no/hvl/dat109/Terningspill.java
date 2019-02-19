@@ -10,16 +10,16 @@ import java.util.stream.Collectors;
  * The type Terningspill.
  */
 public class Terningspill {
-    private int id;
+    private int id; // Ikke i bruk
 
     /**
      * The Spillere.
      */
-    ArrayList<Spiller> spillere;
+    private ArrayList<Spiller> spillere;
     /**
      * The Kopp.
      */
-    Kopp kopp;
+    private Kopp kopp;
 
 
     /**
@@ -87,6 +87,13 @@ public class Terningspill {
         id = 0;
         kopp = new Kopp();
 
+    }
+
+
+    /**
+     * Leser inn spillerne.
+     */
+    public void lesInnSpillere() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Antall spillere?");
@@ -95,6 +102,43 @@ public class Terningspill {
         for (int i = 0; i < antall; i++) {
             System.out.println("Navn på spiller nummer " + (i + 1));
             leggTilSpiller(sc.nextLine());
+
         }
+    }
+
+    /**
+     * Gets spillere.
+     *
+     * @return the spillere
+     */
+    public ArrayList<Spiller> getSpillere() {
+        return spillere;
+    }
+
+    /**
+     * Sets spillere.
+     *
+     * @param spillere the spillere
+     */
+    public void setSpillere(ArrayList<Spiller> spillere) {
+        this.spillere = spillere;
+    }
+
+    /**
+     * Gets kopp.
+     *
+     * @return the kopp
+     */
+    public Kopp getKopp() {
+        return kopp;
+    }
+
+    /**
+     * Sets kopp.
+     *
+     * @param kopp the kopp
+     */
+    public void setKopp(Kopp kopp) {
+        this.kopp = kopp;
     }
 }
