@@ -71,7 +71,7 @@ public class Terningspill {
                 spill(vinnere);
 
                 Spiller nyvinner = spillere.stream().max(Comparator.comparingInt(Spiller::getVerdi)).orElse(null);
-                vinnere = spillere.stream().filter(x -> x.getVerdi() == nyvinner.getVerdi()).collect(Collectors.toList());
+                vinnere = vinnere.stream().filter(x -> x.getVerdi() == nyvinner.getVerdi()).collect(Collectors.toList());
             }
 
             return vinnere.get(0);
